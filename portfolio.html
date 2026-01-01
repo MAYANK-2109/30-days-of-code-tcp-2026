@@ -1,22 +1,11 @@
 <!DOCTYPE html>
 <style>
 
-    .bg-fixed{
-      position:fixed;
-      inset:0;
-      background-image: url("Gemini_Generated_Image_4tfmvr4tfmvr4tfm.png");
-      background-size: cove
-      background-position center center;
-      z-index:-1;
-      filter: saturate(0.95) contrast(1) brightness(0.6);
-      will-change: transform;
-    }
-
     body {
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        background-image: url(Gemini_Generated_Image_4tfmvr4tfmvr4tfm.png);
+        background-image: url(https://static.vecteezy.com/system/resources/thumbnails/007/065/637/original/abstract-purple-pink-red-and-blue-glitter-particles-background-use-for-wallpaper-multi-colored-fluorescent-dust-simulate-cosmic-radiation-waves-3d-rendering-free-video.jpg);
         background-size: cover;
         background-attachment: fixed;   
         background-position: center;
@@ -27,16 +16,24 @@
         color: white;
         padding:10%;
         text-align: center;
-        margin: 10%;
+        margin: 5%;
         font-size: xx-large;
+    }
+    header h1:hover {
+        text-shadow:0 0 10px rgb(213, 160, 238);
+    }
+    header p{
+        font-size: medium;
+        color: rgba(172, 169, 169, 0.697);
+        letter-spacing: 5px;
     }
     nav ul {
         list-style-type: none;
         padding: 0;
         text-align: center;
-        
-        
+        margin-top: 20px;
     }
+
     nav ul li{
         display: inline;
         margin-right: 10px;
@@ -54,7 +51,7 @@
         
     }
     nav ul li a:hover {
-        color: rgb(178, 238, 246);
+        color: rgb(213, 160, 238);
         background-color: #1f2c2d59;
     }
 
@@ -62,14 +59,16 @@
         margin: 20px;
         color: white;
         padding: 20px;
-        background-color: rgba(3, 28, 41, 0.84);
+        background-color: rgba(27, 3, 41, 0.84);
         border-radius: 5px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
+
     section h3 {
         color: rgb(173, 216, 230);
         font-size: 1.3rem;
     }
+
     section p {
         font-size: 1rem;
         line-height: 1.6;
@@ -82,11 +81,13 @@
         border-radius: 15%;
         margin: 30px auto;
     }
+
     img:hover {
         transform: scale(1.05);
         transition: 0.3s ease-in-out;
-        box-shadow: 0 15px 15px rgb(65, 217, 237);
+        box-shadow: 0 0 20px rgba(183, 73, 247, 0.721);
     }
+
     #projects div{
         text-align: center;
         display: inline-block;
@@ -98,13 +99,14 @@
     }
 </style>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
 </head>
-<body>
 
+<body>
     <a>
         <nav>
             <ul>
@@ -118,6 +120,7 @@
 
      <header>
         <h1>Welcome to My Portfolio</h1>
+        <p> DREAMER | DESIGNER | DEVELOPER</p>
     </header>
 
     <img src="IMG-20251218-WA0068.jpg" alt="Profile Picture" />
@@ -125,6 +128,7 @@
 
     <section id="projects">
         <h2>Projects</h2>
+
             <div>
                 <h3>Farmigo</h3>
                 <p> A web app being an interface for farmers to connect and rent their farming tools and instruments.</p>
@@ -138,7 +142,6 @@
                 <p>A web app for managing and organizing learning resources.</p>
             </div>
             
-        </ul>
     </section>
 
 
