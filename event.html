@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Event Schedule</title>
+        <style>
+            :root {
+                --primary-color: #ff6b6b;
+                --secondary-color: #4ecdc4;
+                --accent-color: #45b7d1;
+                --border-radius: 12px;
+                --spacing-unit: 1rem;
+            }
+
+            body {
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: 0;
+                padding: 0;
+                background-image: url(ai-background-1.jpg);
+                background-attachment: fixed;   
+                background-position: center;
+            }
+
+            header {
+                text-align: center;
+                font-size: 2.5rem;
+                font-weight: bold;
+                color: white;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                margin-bottom: var(--spacing-unit);
+                animation: fadeIn 1s ease-in;
+            }
+
+            h1 {
+                text-align: center;
+                color: white;
+                font-size: 2rem;
+                margin-bottom: var(--spacing-unit);
+                text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+            }
+
+            p {
+                text-align: center;
+                color: #f0f0f0;
+                font-size: 1.1rem;
+                margin-bottom: calc(var(--spacing-unit) * 2);
+                max-width: 600px;
+            }
+
+            section {
+                background: rgba(255, 255, 255, 0.5);
+                border-radius: var(--border-radius);
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);;
+                padding: calc(var(--spacing-unit) * 2);
+                margin: var(--spacing-unit) 0;
+                width: 90%;
+                max-width: 800px;
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+                transition: transform 0.3s ease;
+            }
+
+            section:hover {
+                transform: translateY(-5px);
+            }
+
+            #events {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin: var(--spacing-unit) 0;
+                box-shadow:0 4px 10px rgba(0, 0, 0, 0.467);;
+                border-radius: var(--border-radius);
+                overflow: hidden;
+            }
+
+            table th, td {
+                padding: calc(var(--spacing-unit) * 0.75);
+                text-align: center;
+                border: none;
+                background: rgba(255, 255, 255, 0.641);
+            }
+
+            table thead {
+                background: var(--primary-color);
+                font-family: arial;
+                font-weight: bold;
+            }
+
+            table tbody tr:hover {
+                background: rgba(0, 36, 75, 0.222);
+                transition: background 0.3s ease;
+            }
+
+            fieldset {
+                border: 2px solid var(--accent-color);
+                border-radius: var(--border-radius);
+                padding: calc(var(--spacing-unit) * 1.5);
+                margin: var(--spacing-unit) 0;
+                background: rgba(255, 255, 255, 0.95);
+                box-shadow: var(--shadow);
+            }
+
+            legend {
+                font-weight: bold;
+                font-style: italic;
+                color: var(--primary-color);
+                padding: 0 calc(var(--spacing-unit) * 0.5);
+                background: white;
+                border-radius: var(--border-radius);
+            }
+
+            div {
+                margin-bottom: var(--spacing-unit);
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-unit);
+            }
+
+            label {
+                display: inline-block;
+                width: 150px;
+                font-weight: 500;
+                color: #555;
+            }
+
+            input[type="text"], input[type="email"], input[type="number"], input[type="date"] {
+                padding: calc(var(--spacing-unit) * 0.5);
+                border: 1px solid #ddd;
+                border-radius: 6px;
+                width: 100%;
+                max-width: 300px;
+                transition: border-color 0.3s ease;
+            }
+
+            #workspace, #ticket {
+                display: flex;
+                flex-direction: column;
+                gap: var(--spacing-unit);
+            }
+
+            #workspace div, #ticket div {
+                display: flex;
+                align-items: center;
+                gap: var(--spacing-unit);
+            }
+
+            button {
+                background: var(--primary-color);
+                color: white;
+                border: none;
+                padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5);
+                border-radius: var(--border-radius);
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background 0.3s ease, transform 0.2s ease;
+                box-shadow: var(--shadow);
+            }
+
+            button:hover {
+                background: rgba(255, 28, 77, 0.945);
+                transform: scale(1.05);
+            }
+
+            hr {
+                border: none;
+                height: 2px;
+                background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+                margin: calc(var(--spacing-unit) * 2) 0;
+                width: 80%;
+            }
+
+            @keyframes fadeIn {
+                from { opacity: 0; transform: translateY(-20px); }
+                to { opacity: 1; transform: translateY(0); }
+            }
+
+            /* Non-standard element: Custom clip-path for a decorative element */
+            .decorator {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 50px;
+                height: 50px;
+                background: var(--accent-color);
+                clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+
+    <body>
+        <section id="events">
+            <h1>
+                Events list 
+            </h1>
+            <p>The detials for the event are listed below</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Time</th>
+                        <th>Activity</th>
+                        <th>Venue</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>09:00 AM</td>
+                        <td>Inaugration ceremony</td>
+                        <td>Main Hall</td>
+                    </tr>
+                    <tr>
+                        <td>11:00 AM</td>
+                        <td>Spearkers session</td>
+                        <td>Convo Hall</td>
+                    </tr><tr>
+                        <td>01:00 PM</td>
+                        <td>Live demo</td>
+                        <td>APJ Workspace</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+        <section>
+            <h1>Registration form</h1>
+            <p>To be a part of this amazing event, register thorugh the form below to and gain hands on experience.</p>
+            <fieldset>
+            <form onsubmit="alert('form submitted succesfully')" action="">
+                <div>
+                    <label for="fullname">Full name</label>
+                    <input type ="text" id="fullname" name="fullname" required>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type ="email" id="email" name="email" required>
+                </div>
+
+                <div>
+                    <label for="age">Age</label>
+                    <input type ="number" id="age" name="age" required>
+                </div>
+
+                <div>
+                    <label for="date">Registration date</label>
+                    <input type ="date" id="date" name="date" required>
+                </div>
+            <fieldset id="ticket">
+                <legend>Select Ticket type</legend>
+                <div>
+                    <input type ="radio" id="acc1" name="vip" value="vip">
+                    <label for="acc1">VIP </label>
+
+                    <input type="radio" id="acc2" name="std" value="std">
+                    <label for="acc2">Standard</label>
+
+                    <input type="radio" id="acc3" name="stud" value="stud">
+                    <label for="acc3"> Student</label>
+                </div>
+            </fieldset>
+
+            <fieldset id="workspace">
+                <legend>Select Workspace Course</legend>
+
+                <div><input type="checkbox" id="cs1" name="cs1" value="cs1">
+                <label for="cs1">Frontend </label></div>
+
+                <div><input type="checkbox" id="cs2" name="cs2" value="cs2">
+                <label for="cs2">Backend</label></div>
+
+                <div><input type="checkbox" id="cs3" name="cs3" value="cs3">
+                <label for="cs3">Full stack </label></div>
+            </fieldset>
+                <br>
+            <button type="submit">Register</button>
+        </fieldset>
+            </form>
+
+
+        </section>
+
+        
+    </body>
+
+
+</html>
