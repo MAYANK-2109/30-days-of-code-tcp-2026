@@ -19,6 +19,8 @@ DAY 4 LANDING PAGE
 Required files: landing.html, style1.css
 <br>
 
-<img width="1920" height="1080" alt="Screenshot 2026-01-04 234346" src="https://github.com/user-attachments/assets/f5f4d093-ae87-4d5e-a497-e457b0fb38b4" /><img width="1920" height="1080" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/9c9999ba-59dd-490c-a11d-c961407fdfe1" /><img width="1919" height="248" alt="Screenshot 2026-01-04 234428" src="https://github.com/user-attachments/assets/ef22d982-b31f-4a62-b017-ad8a1065c22c" />
+<img width="1920" height="1080" alt="Screenshot 2026-01-04 234346" src="https://github.com/user-attachments/assets/f5f4d093-ae87-4d5e-a497-e457b0fb38b4" />
+<img width="1920" height="976" alt="Screenshot (3)" src="https://github.com/user-attachments/assets/853c42d1-5211-4083-96e1-3ad4c712fa8a" />
+<img width="1920" height="248" alt="Screenshot 2026-01-04 234428" src="https://github.com/user-attachments/assets/ef22d982-b31f-4a62-b017-ad8a1065c22c"/>
 
 
