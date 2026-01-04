@@ -45,6 +45,12 @@
         margin-top: 20px;
         position: sticky;
     }
+    nav{
+        position: fixed;
+        width: 100%;
+        top: 0; 
+        margin:0;
+    }
 
     nav ul li{
         display: inline;
@@ -114,7 +120,7 @@
     #contact, #about {
         text-align: center;
         display: inline-block;
-        width: 90%;
+        width: 95vw;
     }
     #contact div {
         align-content: center;
@@ -170,7 +176,7 @@
     }
 
     #projects div {
-        width: 90%;
+        width: 95%;
         min-height: 150px;
         display: flex;
         flex-direction: column;
@@ -202,4 +208,5 @@
      * {
         cursor: cell;
         scroll-behavior: smooth;
+        text-align: center;
     }

@@ -1,0 +1,218 @@
+
+        :root {
+            --primary-color: #37c551;
+            --secondary-color: #f1ffef;
+            --accent-color: #307e5a;
+            --text-main: #d2ffe5;
+            --bg-light: #f8fafc;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            --background: rgba(31, 126, 77, 0.726);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            line-height: 1.6;
+            min-height: 100vh;
+            background-color: #000; /* Fallback color */
+        }
+
+        body::before {
+            content: "";
+            position: fixed; /* Keeps it fixed like your background-attachment */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            
+            /* Your Image */
+            background: url('default-cameraman-X06-xNC1Md0-unsplash.jpg');
+            background-size: cover;
+            background-position: center;
+            
+            /* --- APPLY YOUR FILTERS HERE --- */
+            filter: brightness(0.4) contrast(1.2) grayscale(20%) blur(5px); 
+            
+            z-index: -1; /* Puts it behind everything else */
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(2, 21, 2, 0.8);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+
+        .logo span { color: var(--primary-color); }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li { margin-left: 2rem; }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            font-weight: 500;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--primary-color); }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative; /* Required for absolute children */
+            overflow: hidden;
+            
+            /* BOTTOM LAYER: Pure Gradient */
+            background: linear-gradient(135deg, rgb(27, 121, 27) 0%, #000000 100%);
+            padding: 0 1rem;
+        }
+
+        /* MIDDLE LAYER: Clear, floating image */
+        .floating-shoe {
+            position: absolute;
+            width: 500px; /* Adjust size as needed */
+            height: auto;
+            z-index: 1;    /* Sits above gradient */
+            opacity: 0.75;  /* Keeps it clear but slightly blended */
+            pointer-events: none; 
+            scale: 1.8;
+            animation: shoeFloat 4s ease-in-out infinite;
+        }
+
+        /* TOP LAYER: The Text content */
+        .hero-content {
+            position: relative;
+            z-index: 2;    /* Sits above the image */
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            letter-spacing: 10px;
+            text-shadow: 0 10px 30px rgba(0,0,0,0.8); /* Ensures text pops over the image */
+        }
+
+        /* Floating Animation */
+        @keyframes shoeFloat {
+            0%, 100% {
+                transform: translateY(0) rotate(-5deg);
+            }
+            50% {
+                transform: translateY(-30px) rotate(2deg); /* Moves up and tilts slightly */
+            }
+}
+        .cta-btn {
+            display: inline-block;
+            margin-top: 2rem;
+            padding: 1rem 2.5rem;
+            background: var(--white);
+            color: var(--primary-color);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 128, 17, 0.823);
+        }
+        
+        .price-card button {
+            margin-top: 1.5rem;
+            padding: 0.75rem 2rem;
+            background: var(--primary-color);
+            color: var(--white);
+            border: none;
+            border-radius: 30px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        /* 4. Features & Pricing (Flexbox Layout) */
+        section { padding: 5rem 10%; }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+
+        .feature-grid, .pricing-grid {
+            display: flex;
+            gap: 2rem;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+        }
+
+        .feature-card, .price-card {
+            flex: 1;
+            min-width: 280px;
+            background: var(--background);
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: var(--transition);
+        }
+
+        .feature-card:hover, .price-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 20px 25px -5px rgba(23, 86, 57, 0.664);
+        }
+
+        /* 5. Keyframes & Footer */
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        footer {
+            background:rgba(6, 59, 6, 0.545);
+            color: var(--white);
+            text-align: center;
+            padding: 3rem;
+        }
+
+        /* Responsive adjustment */
+        @media (max-width: 768px) {
+            .nav-links { display: none; } 
+            .hero h1 { font-size: 2.5rem; }
+            .floating-shoe {
+                width: 300px;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+    
