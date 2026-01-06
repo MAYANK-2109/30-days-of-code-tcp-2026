@@ -27,6 +27,11 @@ Required files: landing.html, style1.css
 DAY 5 
 <br>
 <img width="780" height="853" alt="image" src="https://github.com/user-attachments/assets/8d484a33-46e7-4cd9-8390-74ec653de969" />
+<hr><hr> 
+DAY 6 
+<br>
+<img width="905" height="739" alt="Screenshot 2026-01-06 224301" src="https://github.com/user-attachments/assets/7a31490d-da36-41f8-aca7-dad82c87570b" />
+
 
 
 
