@@ -35,18 +35,21 @@ body {
 .cell {
     width: 100px;
     height: 100px;
-    background-color: #000000;
+    background-image: url(bg.png);
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.5rem;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: #007bff 0px 3px 30px inset;
+    box-shadow: #007bff7c 0px 3px 30px inset;
+    transition: 0.3s ease-in-out;
 }
 
 .cell:hover {
     background-color: #152535;
+    box-shadow: #005effb9 0px 3px 30px inset;
 }
 
 #reset {
