@@ -31,6 +31,14 @@ DAY 5
 DAY 6 
 <br>
 <img width="905" height="739" alt="Screenshot 2026-01-06 224301" src="https://github.com/user-attachments/assets/7a31490d-da36-41f8-aca7-dad82c87570b" />
+<hr><hr>
+DAY 7 
+<br><img width="1075" height="716" alt="Screenshot 2026-01-07 212417" src="https://github.com/user-attachments/assets/1d981eec-7291-45a2-9b89-290100c86a54" />
+<hr><hr>
+DAY 8 
+<br>
+<img width="1217" height="910" alt="image" src="https://github.com/user-attachments/assets/23dbce22-5897-464d-a3e1-10812afe8d00" />
+<hr><hr>
 
 
 
