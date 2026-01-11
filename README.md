@@ -45,6 +45,10 @@ DAY 9<br>
 DAY 10 <br>
 <img width="1221" height="697" alt="Screenshot 2026-01-10 232357" src="https://github.com/user-attachments/assets/90b1cc14-2d0c-4174-be6e-d56274f0ad36" />
 <hr><hr>
+DAY 11 <br>
+<img width="1912" height="867" alt="image" src="https://github.com/user-attachments/assets/65f3398b-d88f-439d-bf20-8a28e70b51da" />
+<hr><hr>
+
 
 
 
