@@ -48,6 +48,10 @@ DAY 10 <br>
 DAY 11 <br>
 <img width="1912" height="867" alt="image" src="https://github.com/user-attachments/assets/65f3398b-d88f-439d-bf20-8a28e70b51da" />
 <hr><hr>
+DAY 12 <br>
+<img width="1144" height="911" alt="image" src="https://github.com/user-attachments/assets/6377fd89-1f48-4157-8f68-1f199f998e9f" />
+<hr><hr>
+
 
 
 
